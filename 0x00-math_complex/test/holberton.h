@@ -2,6 +2,7 @@
 #define HOLBERTON_H
 #include <stdio.h>
 #include <stddef.h>
+#include <math.h>
 /*Structure*/
 typedef struct complex
 {

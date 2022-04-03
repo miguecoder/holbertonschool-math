@@ -10,8 +10,9 @@
 int main(void)
 {
 	complex c1;
+	double mod;
 
-	printf("Check display_complex_number\n");
+	printf("Check display_complex_number:\n");
 	c1.re = 1;
 	c1.im = 2;
 	display_complex_number(c1);
@@ -21,13 +22,18 @@ int main(void)
 	c1.re = 1;
 	c1.im = -2;
 	display_complex_number(c1);
-	printf("Check conjugate\n");
+	printf("Check conjugate:\n");
 	c1.re = 1;
 	c1.im = 2;
 	c1 = conjugate(c1);
 	display_complex_number(c1);
 	c1 = conjugate(c1);
 	display_complex_number(c1);
+	printf("Check modulus:\n");
+	c1.re = 1;
+	c1.im = 2;
+	mod = modulus(c1);
+	printf("%f\n", mod);
 	return (0);
 
 }
