@@ -22,6 +22,7 @@ void display_complex_number(complex c)
 		}
 		else
 		{
+			printf("0\n");
 		}
 	}
 	else if (c.re != 0)
