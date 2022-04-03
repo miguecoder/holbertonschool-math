@@ -7,6 +7,8 @@
  */
 void display_complex_number(complex c)
 {
+	double cs = 0;
+
 	if (c.re == 0)
 	{
 		if (c.im > 0)
@@ -15,7 +17,8 @@ void display_complex_number(complex c)
 		}
 		else if (c.im < 0)
 		{
-			printf("- %.0f*-1i\n", c.im);
+			cs = c.im * -1;
+			printf("- %.0fi\n", cs);
 		}
 		else
 		{
@@ -35,11 +38,12 @@ void display_complex_number(complex c)
 			if (c.im == -1)
 				printf("%.0f - i\n", c.re);
 			else
-				printf("%.0f - %.0f*-1i\n", c.re, c.im);
+			{
+				cs = c.im * -1;
+				printf("%.0f - %.0fi\n", c.re, cs);
+			}
 		}
 		else
-		{
 			printf("%.0f\n", c.re);
-		}
 	}
 }

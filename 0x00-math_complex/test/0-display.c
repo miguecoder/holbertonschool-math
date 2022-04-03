@@ -7,39 +7,43 @@
  */
 void display_complex_number(complex c)
 {
-	if (c.real == 0)
+	double cs = 0;
+
+	if (c.re == 0)
 	{
-		if (c.imagi > 0)
+		if (c.im > 0)
 		{
-			printf("%.0fi\n", c.imagi);
+			printf("%.0fi\n", c.im);
 		}
-		else if (c.imagi < 0)
+		else if (c.im < 0)
 		{
-			printf("- %.0f*-1i\n", c.imagi);
+			cs = c.im * -1;
+			printf("- %.0fi\n", cs);
 		}
 		else
 		{
 		}
 	}
-	else if (c.real != 0)
+	else if (c.re != 0)
 	{
-		if (c.imagi > 0)
+		if (c.im > 0)
 		{
-			if (c.imagi == 1)
-				printf("%.0f + i\n", c.real);
+			if (c.im == 1)
+				printf("%.0f + i\n", c.re);
 			else
-				printf("%.0f + %.0fi\n", c.real, c.imagi);
+				printf("%.0f + %.0fi\n", c.re, c.im);
 		}
-		else if (c.imagi < 0)
+		else if (c.im < 0)
 		{
-			if (c.imagi == -1)
-				printf("%.0f - i\n", c.real);
+			if (c.im == -1)
+				printf("%.0f - i\n", c.re);
 			else
-				printf("%.0f - %.0f*-1i\n", c.real, c.imagi);
+			{
+				cs = c.im * -1;
+				printf("%.0f - %.0fi\n", c.re, cs);
+			}
 		}
 		else
-		{
-			printf("%.0f\n", c.real);
-		}
+			printf("%.0f\n", c.re);
 	}
 }
