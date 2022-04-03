@@ -5,8 +5,8 @@
 /*Structure*/
 typedef struct complex
 {
-	double re;
-	double im;
+	double real;
+	double imagi;
 } complex;
 
  /*Prototypes*/
